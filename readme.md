@@ -5,11 +5,8 @@ This sample demonstrates a simple AKS deployment uisng the Blob CSI storage driv
 ## Invocation
 
 ```powershell
-# create the AKS cluster (with blob CSI driver enabled)
+# create the AKS cluster (with blob CSI driver) and create deployment and PVCs
 ./setup.ps1
-
-# apply the deployment and PVCs
-kubectl apply -f .\deployment.yaml -f .\pvc-nfs.yaml -f .\pvc-blobfuse.yaml
 ```
 
 ## Observations

@@ -11,3 +11,4 @@ az aks create -n $cluster -g $group --enable-blob-driver -c 1
 az aks get-credentials -n $cluster -g $group --overwrite-existing
 
 # deploy the application and PVCs
+kubectl apply -f .\deployment.yaml -f .\pvc-nfs.yaml -f .\pvc-blobfuse.yaml
