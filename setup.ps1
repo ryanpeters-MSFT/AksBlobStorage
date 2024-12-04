@@ -9,3 +9,5 @@ az aks create -n $cluster -g $group --enable-blob-driver -c 1
 
 # authenticate
 az aks get-credentials -n $cluster -g $group --overwrite-existing
+
+# deploy the application and PVCs

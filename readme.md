@@ -1,10 +1,13 @@
-# AKS using Blob Storage (CSI)
+# AKS using Blob Storage Driver (CSI)
 
 This sample demonstrates a simple AKS deployment uisng the Blob CSI storage driver and deploys a basic application with volume mounts for both NFS and Blobfuse storage drivers.
 
 ## Invocation
 
 ```powershell
+# create the AKS cluster (with blob CSI driver enabled)
+./setup.ps1
+
 # apply the deployment and PVCs
 kubectl apply -f .\deployment.yaml -f .\pvc-nfs.yaml -f .\pvc-blobfuse.yaml
 ```
