@@ -1,6 +1,8 @@
 # AKS using Blob Storage Driver (CSI)
 
-This sample demonstrates a simple AKS deployment uisng the Blob CSI storage driver and deploys a basic application with volume mounts for both NFS and Blobfuse storage drivers.
+This sample demonstrates a simple AKS deployment uisng the Blob CSI storage driver and deploys a basic application with volume mounts for both NFS and Blobfuse storage drivers. 
+
+When the application (an Nginx web server) is deployed, it will contain two mount points, `/data-nfs` and `/data-fuse`, which are mounted volumes using the NFS and the Blobfuse drivers, respectively. You can navigate to these volumes within the pod and invoke filesystem-level commands and observe the differences. 
 
 ## Invocation
 
